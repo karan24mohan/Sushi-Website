@@ -1,0 +1,825 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+/* General CSS Starts */
+
+:root {
+  --playfair-display: "Playfair Display", serif;
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --primary-color: #b1454a;
+  --secondary-color: #121212;
+  --black-200: #020202;
+  --black-300: #333333;
+  --black-400: #1f1e31;
+  --black-500: #555555;
+  --gray-100: #888888;
+  --color-white: #fff;
+  --color-creamson: #fff0de;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--color-creamson);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* General CSS Ends */
+
+/* Header CSS Starts */
+
+.header_nav {
+  display: flex;
+  overflow: hidden;
+}
+
+.header_logo {
+  display: flex;
+  flex: 1;
+  position: relative;
+  padding: 20px;
+}
+
+.header_logo h4 {
+  padding-left: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: var(--playfair-display);
+  color: #fff;
+  opacity: 0.8;
+}
+
+.header_logo_overlay {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-color: var(--primary-color);
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1.236;
+  padding: 20px;
+  list-style: none;
+  gap: 64px;
+}
+
+.header_menu li {
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Header CSS Ends */
+
+/* Hero CSS Starts */
+
+.hero {
+  display: flex;
+  min-height: calc(100vh - 74px);
+  overflow: hidden;
+}
+
+.hero_image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+}
+
+.hero_image img {
+  width: 120%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero_image_overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.hero_image h2 {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  font-family: var(--playfair-display);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 138px;
+  color: #fff;
+}
+
+.hero_content {
+  flex: 1.22;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hero_content_info {
+  padding: 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero_content_info h1 {
+  font-size: 80px;
+  font-weight: 600;
+  font-family: var(--playfair-display);
+  color: var(--secondary-color);
+}
+
+.hero_content_info p {
+  margin: 32px 0 0 32px;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero_content_buttons {
+  margin: 41px 0 0 41px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.hero_content_order_button {
+  padding: 20px;
+  border-radius: 36px;
+  min-width: 212px;
+  outline: none;
+  border: none;
+  background: var(--secondary-color);
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hero_content_play_button {
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--black-200);
+  font-family: var(--plus-jakarta-sans);
+  cursor: pointer;
+}
+
+.hero_content_play_button img {
+  margin-right: 12px;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.hero_content_testimonial {
+  padding: 32px 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: var(--color-white);
+}
+
+.hero_content_customer {
+  flex: 1;
+  gap: 10px;
+}
+
+.hero_content_customer h4 {
+  font-size: 62px;
+  font-weight: 400;
+  font-family: var(--playfair-display);
+}
+
+.hero_content_customer p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.hero_content_review {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(2, 2, 2, 0.1);
+  min-width: 200px;
+}
+
+.hero_content_review img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.hero_content_review p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 32px;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+
+/* Hero CSS Ends */
+
+/* About Us CSS Starts */
+
+.about_us {
+  display: flex;
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.about_us_image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.about_us_image div {
+  padding: 32px 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.about_us_image3 {
+  border-bottom: 8px solid var(--color-creamson);
+  background-image: url("./assets/images/about_bg1.png");
+}
+
+.about_us_image3 img {
+  width: 225px;
+  height: 200px;
+}
+
+.about_us_image2 {
+  background-image: url("./assets/images/about_bg2.png");
+}
+
+.about_us_image2 img {
+  width: 240px;
+  height: 160px;
+}
+
+.about_us_button {
+  position: absolute;
+  right: 0;
+  padding: 12px 32px;
+  background-color: var(--secondary-color);
+  border-radius: 32px 0px 0px 32px;
+  border: none;
+  outline: none;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+  min-height: 64px;
+  color: var(--color-white);
+}
+
+.about_us_content {
+  padding: 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about_us_subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--primary-color);
+  opacity: 0.8;
+  letter-spacing: -0.01em;
+}
+
+.about_us_title {
+  font-size: 64px;
+  font-weight: 600;
+  font-family: var(--playfair-display);
+  color: var(--secondary-color);
+  margin-top: 16px;
+}
+
+.about_us_description {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  margin: 32px 0;
+}
+
+/* About Us CSS Ends */
+
+/* Popular Foods CSS Starts */
+
+.popular_foods {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  background-image: url("./assets/images/popular_bg.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.popular_foods_title {
+  font-size: 56px;
+  font-family: var(--playfair-display);
+  font-weight: 600;
+  line-height: 78px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.popular_foods_filters {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 100%;
+  margin-top: 48px;
+  overflow-x: auto;
+}
+
+.popular_foods_filter_btn {
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 46px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  font-family: var(--plus-jakarta-sans);
+  color: #fff;
+  cursor: pointer;
+}
+
+.popular_foods_filter_btn img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.popular_foods_filter_btn.active {
+  background-color: var(--color-white);
+  color: var(--primary-color);
+}
+
+.popular_foods_filter_btn:hover {
+  background-color: var(--color-white);
+  color: var(--primary-color);
+}
+
+.popular_foods_catalogue {
+  margin-top: 64px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
+.popular_foods_card {
+  padding: 38px;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 36px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.popular_foods_card_image {
+  width: 110px;
+  height: 84px;
+  object-fit: contain;
+}
+
+.popular_foods_card_title {
+  margin-top: 47px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: var(--playfair-display);
+  color: #fff;
+  text-align: center;
+}
+
+.popular_foods_card_details {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular_foods_card_rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popular_foods_card_rating img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.popular_foods_card_rating p {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--color-white);
+}
+
+.popular_foods_card_price {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--color-white);
+}
+
+.popular_foods_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.explore_btn {
+  padding: 12px 32px;
+  background-color: var(--secondary-color);
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+  min-height: 64px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore_btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.popular_foods_card.active {
+  background-color: var(--color-white);
+  min-width: 340px;
+  height: fit-content;
+}
+
+.popular_foods_card.active .popular_foods_card_image {
+  width: 214px;
+  height: 160px;
+}
+
+.popular_foods_card.active .popular_foods_card_title {
+  color: var(--black-500);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.popular_foods_card.active .popular_foods_card_rating p {
+  color: var(--gray-100);
+  font-size: 24px;
+}
+
+.popular_foods_card.active .popular_foods_card_price {
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+/* Popular Foods CSS Ends */
+
+/* Trending CSS Starts */
+
+.trending {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.trending_sushi,
+.trending_drinks {
+  display: flex;
+  min-height: 640px;
+}
+
+.trending_discover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  top: 44%;
+  left: 44%;
+}
+
+.trending_discover p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+}
+
+.trending_content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px 64px;
+}
+
+.trending_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trending_list li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 210px;
+}
+
+.trending_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
+.trending_list p {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+}
+
+.trending_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  padding: 32px 64px;
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./assets/images/japanese_sushi.png");
+}
+
+.trending_image img {
+  width: 254px;
+  height: 260px;
+  object-fit: contain;
+}
+
+.trending_arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.trending_arrow img {
+  object-fit: contain;
+}
+
+.trending_arrow_left img,
+.trending_arrow_top img {
+  width: auto;
+  height: 100%;
+}
+
+.trending_arrow_bottom img,
+.trending_arrow_right img {
+  width: 100%;
+  height: auto;
+}
+
+.trending_arrow_left {
+  top: 12%;
+  left: -2.5px;
+}
+
+.trending_arrow_bottom {
+  right: 12%;
+  bottom: -6.5px;
+}
+
+.trending_arrow_top {
+  top: -10.5px;
+  left: 12%;
+}
+
+.trending_arrow_right {
+  right: -2.5px;
+  bottom: 12%;
+}
+
+.subscription {
+  padding: 64px;
+  background-color: var(--primary-color);
+  background-image: url("./assets/images/subscribe_bg.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.subscription h2 {
+  font-size: 88px;
+  font-family: var(--playfair-display);
+  font-weight: 600;
+  line-height: 123px;
+  color: #fff;
+  text-align: center;
+}
+
+.subscription p {
+  font-size: 18px;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 300;
+  line-height: 36px;
+  margin-top: 32px;
+  color: #fffc;
+}
+
+.subscription_form {
+  min-width: 480px;
+  margin-top: 40px;
+  padding: 14px 14px 14px 24px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 46px;
+}
+
+.subscription_form input {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 400px;
+  font-family: var(--plus-jakarta-sans);
+  color: #fff;
+  opacity: 0.5;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: #c67578;
+}
+
+.subscription_form button {
+  padding: 20px;
+  min-width: 180px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: #fff;
+  text-align: center;
+  background: var(--black-400);
+  border-radius: 46px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.footer_logo {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--playfair-display);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.footer_logo span {
+  color: var(--secondary-color);
+}
+
+.footer_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 64px;
+  list-style: none;
+}
+
+.footer_nav li {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.footer_socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 32px;
+}
+
+.footer_socials li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+}
